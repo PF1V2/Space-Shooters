@@ -59,3 +59,18 @@ C:\Users\matia\Documents\UADE\Paradigmas\EngineGDI - Base.v2.1\Space Shooter\Eng
 C:\Users\matia\Documents\UADE\Paradigmas\EngineGDI - Base.v2.1\Space Shooter\EngineGDI\obj\Debug\EngineGDI.csproj.CoreCompileInputs.cache
 C:\Users\matia\Documents\UADE\Paradigmas\EngineGDI - Base.v2.1\Space Shooter\EngineGDI\obj\Debug\EngineGDI.exe
 C:\Users\matia\Documents\UADE\Paradigmas\EngineGDI - Base.v2.1\Space Shooter\EngineGDI\obj\Debug\EngineGDI.pdb
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\bin\Debug\Bullet.png
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\bin\Debug\Enemy1.png
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\bin\Debug\Enemy1v2.png
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\bin\Debug\Player.png
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\bin\Debug\sound.wav
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\bin\Debug\test.png
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\bin\Debug\EngineGDI.exe.config
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\bin\Debug\EngineGDI.exe
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\bin\Debug\EngineGDI.pdb
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\obj\Debug\EngineGDI.csproj.AssemblyReference.cache
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\obj\Debug\EngineGDI.Properties.Resources.resources
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\obj\Debug\EngineGDI.csproj.GenerateResource.cache
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\obj\Debug\EngineGDI.csproj.CoreCompileInputs.cache
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\obj\Debug\EngineGDI.exe
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\obj\Debug\EngineGDI.pdb

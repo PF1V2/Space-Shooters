@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Media;
 using System.Windows.Forms;
-
 
 namespace EngineGDI
 {
@@ -212,7 +210,7 @@ namespace EngineGDI
                         float width = img.Width * cmd.ScaleX;
                         float height = img.Height * cmd.ScaleY;
 
-                        // Transformación: traslación al punto, rotación, luego dibujar con offset
+                        
                         e.Graphics.TranslateTransform(cmd.X, cmd.Y);
                         e.Graphics.RotateTransform(cmd.Angle);
                         e.Graphics.DrawImage(

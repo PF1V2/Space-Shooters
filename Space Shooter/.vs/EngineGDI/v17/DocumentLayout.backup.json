@@ -1,58 +1,58 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\",
+  "WorkspaceRootPath": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|c:\\users\\matia\\documents\\uade\\paradigmas\\enginegdi - base.v2.1\\space shooter\\enginegdi\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\enginegdi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\enginegdi\\gameplaymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\gameplaymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\enginegdi\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\enginegdi\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\enginegdi\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\enginegdi\\shooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\shooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\enginegdi\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\enginegdi\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\enginegdi\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\enginegdi\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\enginegdi\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\enginegdi\\healthcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\healthcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\enginegdi\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\enginegdi\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\enginegdi\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\enginegdi\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\enginegdi\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\enginegdi\\gameplaymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\gameplaymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\enginegdi\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\enginegdi\\shooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\shooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\enginegdi\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\enginegdi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\enginegdi\\healthcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\healthcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\enginegdi\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|c:\\users\\matia\\documents\\github\\space-shooters\\space shooter\\enginegdi\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE1DB8CF-6507-4878-B179-2B2A5FDF7A67}|EngineGDI\\EngineGDI.csproj|solutionrelative:enginegdi\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,160 +66,172 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Animation.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\Animation.cs",
-              "RelativeDocumentMoniker": "EngineGDI\\Animation.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\Animation.cs",
-              "RelativeToolTip": "EngineGDI\\Animation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\Player.cs",
+              "RelativeDocumentMoniker": "EngineGDI\\Player.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\Player.cs",
+              "RelativeToolTip": "EngineGDI\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T17:31:32.845Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "HealthComponent.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\HealthComponent.cs",
-              "RelativeDocumentMoniker": "EngineGDI\\HealthComponent.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\HealthComponent.cs",
-              "RelativeToolTip": "EngineGDI\\HealthComponent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T16:44:40.454Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Shooter.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\Shooter.cs",
-              "RelativeDocumentMoniker": "EngineGDI\\Shooter.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\Shooter.cs",
-              "RelativeToolTip": "EngineGDI\\Shooter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T16:19:21.539Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ScoreManager.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\ScoreManager.cs",
-              "RelativeDocumentMoniker": "EngineGDI\\ScoreManager.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\ScoreManager.cs",
-              "RelativeToolTip": "EngineGDI\\ScoreManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T07:39:02.228Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Bullet.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\Bullet.cs",
-              "RelativeDocumentMoniker": "EngineGDI\\Bullet.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\Bullet.cs",
-              "RelativeToolTip": "EngineGDI\\Bullet.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwA8AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T06:37:36.426Z"
+              "WhenOpened": "2025-09-23T05:21:18.703Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GameplayManager.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\GameplayManager.cs",
-              "RelativeDocumentMoniker": "EngineGDI\\GameplayManager.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\GameplayManager.cs",
-              "RelativeToolTip": "EngineGDI\\GameplayManager.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAvwL0AAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T05:47:53.472Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\Enemy.cs",
-              "RelativeDocumentMoniker": "EngineGDI\\Enemy.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\Enemy.cs",
-              "RelativeToolTip": "EngineGDI\\Enemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T05:47:10.348Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\Player.cs",
-              "RelativeDocumentMoniker": "EngineGDI\\Player.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\Player.cs",
-              "RelativeToolTip": "EngineGDI\\Player.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAuwEoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T05:21:18.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "MenuManager.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\MenuManager.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\MenuManager.cs",
               "RelativeDocumentMoniker": "EngineGDI\\MenuManager.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\MenuManager.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\MenuManager.cs",
               "RelativeToolTip": "EngineGDI\\MenuManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T04:33:13.897Z"
+              "WhenOpened": "2025-09-23T04:33:13.897Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
               "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\GameManager.cs",
               "RelativeDocumentMoniker": "EngineGDI\\GameManager.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\GameManager.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\GameManager.cs",
               "RelativeToolTip": "EngineGDI\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-23T03:50:05.83Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "GameState.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\GameState.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\GameState.cs",
               "RelativeDocumentMoniker": "EngineGDI\\GameState.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\GameState.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\GameState.cs",
               "RelativeToolTip": "EngineGDI\\GameState.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T03:47:56.974Z"
+              "WhenOpened": "2025-09-23T03:47:56.974Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\Program.cs",
-              "RelativeDocumentMoniker": "EngineGDI\\Program.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\Program.cs",
-              "RelativeToolTip": "EngineGDI\\Program.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwFAAAAA8AAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "HealthComponent.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\HealthComponent.cs",
+              "RelativeDocumentMoniker": "EngineGDI\\HealthComponent.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\HealthComponent.cs",
+              "RelativeToolTip": "EngineGDI\\HealthComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T03:09:48.047Z"
+              "WhenOpened": "2025-09-23T16:44:40.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\Program.cs",
+              "RelativeDocumentMoniker": "EngineGDI\\Program.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\Program.cs",
+              "RelativeToolTip": "EngineGDI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T03:09:48.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ScoreManager.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\ScoreManager.cs",
+              "RelativeDocumentMoniker": "EngineGDI\\ScoreManager.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\ScoreManager.cs",
+              "RelativeToolTip": "EngineGDI\\ScoreManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T07:39:02.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Shooter.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\Shooter.cs",
+              "RelativeDocumentMoniker": "EngineGDI\\Shooter.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\Shooter.cs",
+              "RelativeToolTip": "EngineGDI\\Shooter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T16:19:21.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Animation.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\Animation.cs",
+              "RelativeDocumentMoniker": "EngineGDI\\Animation.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\Animation.cs",
+              "RelativeToolTip": "EngineGDI\\Animation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T17:31:32.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Engine.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\Engine.cs",
+              "RelativeDocumentMoniker": "EngineGDI\\Engine.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\Engine.cs",
+              "RelativeToolTip": "EngineGDI\\Engine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T03:18:22.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameplayManager.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\GameplayManager.cs",
+              "RelativeDocumentMoniker": "EngineGDI\\GameplayManager.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\GameplayManager.cs",
+              "RelativeToolTip": "EngineGDI\\GameplayManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T05:47:53.472Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Engine.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\Engine.cs",
-              "RelativeDocumentMoniker": "EngineGDI\\Engine.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\UADE\\Paradigmas\\EngineGDI - Base.v2.1\\Space Shooter\\EngineGDI\\Engine.cs",
-              "RelativeToolTip": "EngineGDI\\Engine.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAswNYAAAAqAAAAAAAAAA==",
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\Enemy.cs",
+              "RelativeDocumentMoniker": "EngineGDI\\Enemy.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\Enemy.cs",
+              "RelativeToolTip": "EngineGDI\\Enemy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T03:18:22.86Z"
+              "WhenOpened": "2025-09-23T05:47:10.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Bullet.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\Bullet.cs",
+              "RelativeDocumentMoniker": "EngineGDI\\Bullet.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Github\\Space-Shooters\\Space Shooter\\EngineGDI\\Bullet.cs",
+              "RelativeToolTip": "EngineGDI\\Bullet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T06:37:36.426Z",
+              "EditorCaption": ""
             }
           ]
         }
