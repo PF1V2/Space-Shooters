@@ -1,7 +1,6 @@
 namespace EngineGDI
 {
-    // Hereda de GameObject (Herencia)
-    // Implementa IPoolable para poder ser reciclada en el ObjectPool
+    
     public class Bullet : GameObject, IPoolable
     {
         public float Speed { get; set; }

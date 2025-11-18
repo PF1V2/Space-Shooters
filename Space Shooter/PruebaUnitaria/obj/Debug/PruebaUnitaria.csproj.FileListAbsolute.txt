@@ -23,3 +23,9 @@ C:\Users\matia\Documents\GitHub\Space-Shooters\Space Shooter\PruebaUnitaria\obj\
 C:\Users\matia\Documents\GitHub\Space-Shooters\Space Shooter\PruebaUnitaria\obj\Debug\PruebaUn.9F3E2741.Up2Date
 C:\Users\matia\Documents\GitHub\Space-Shooters\Space Shooter\PruebaUnitaria\obj\Debug\PruebaUnitaria.dll
 C:\Users\matia\Documents\GitHub\Space-Shooters\Space Shooter\PruebaUnitaria\obj\Debug\PruebaUnitaria.pdb
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\PruebaUnitaria\bin\Debug\es\Microsoft.TestPlatform.AdapterUtilities.resources.dll
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\PruebaUnitaria\bin\Debug\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\PruebaUnitaria\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\PruebaUnitaria\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\PruebaUnitaria\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\PruebaUnitaria\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll

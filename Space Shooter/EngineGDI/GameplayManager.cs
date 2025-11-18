@@ -9,39 +9,39 @@ namespace EngineGDI
     {
         private Player player;
 
-        // Listas para saber qué objetos están ACTIVOS en pantalla
+        //objetos acitvos
         private List<Enemy> enemies;
         private List<Bullet> bullets;
 
-        // POOLS (Requisito 4): Aquí guardamos los objetos inactivos para reciclar
+        // POOLS 
         private ObjectPool<Bullet> bulletPool;
         private ObjectPool<Enemy> enemyPool;
 
-        // Variables para la lógica de movimiento de enemigos (Zig-Zag)
+        //movimiento enemigos
         private float enemySpeed = 50f;
         private int enemyDirection = 1;
         private float enemyVerticalStep = 25f;
 
         public GameplayManager()
         {
-            // 1. Inicializamos los Pools
+            //pools
             bulletPool = new ObjectPool<Bullet>();
             enemyPool = new ObjectPool<Enemy>();
 
-            // 2. Inicializamos las listas
+            //listas
             enemies = new List<Enemy>();
             bullets = new List<Bullet>();
 
-            // 3. Creamos al Jugador
+            //jugador
             player = new Player(350, 700, 200f);
 
-            // 4. Spawneamos los enemigos iniciales
+            //Spawn ene
             InitializeEnemies();
         }
 
         private void InitializeEnemies()
         {
-            // Aseguramos que la lista esté limpia (los objetos viejos ya debieron volver al pool en Reset)
+            
             enemies.Clear();
 
             int rows = 5;
@@ -57,11 +57,11 @@ namespace EngineGDI
                     float x = initialX + c * spacing;
                     float y = initialY + r * spacing;
 
-                    // --- USO DEL FACTORY (Requisito 2) ---
-                    // Le pedimos a la fábrica que nos consiga un enemigo (del pool) y lo configure.
+                    
+                    // factory
                     Enemy newEnemy = EnemyFactory.SpawnBasicEnemy(x, y, enemyPool);
 
-                    // Lo agregamos a la lista de "enemigos vivos"
+                    // list enemigos vivos
                     enemies.Add(newEnemy);
                 }
             }
@@ -69,24 +69,23 @@ namespace EngineGDI
 
         public void Update()
         {
-            // Actualizar Jugador
+            
             player.Update();
 
-            // Mover Enemigos (Lógica de Zig-Zag)
+            
             UpdateEnemiesLogic();
 
-            // --- DISPARO DEL JUGADOR ---
+            
             if (Engine.IsKeyPressed(Keys.Space))
             {
                 if (player.CanShoot())
                 {
                     Engine.PlaySound("Disparo.wav");
 
-                    // 1. Pedimos una bala al POOL
+                    //pool bala
                     Bullet b = bulletPool.Get();
 
-                    // 2. La configuramos (posición y velocidad)
-                    //    Usamos Transform para la posición
+                    //pos y vel jugador
                     b.Initialize(player.Transform.Position.X, player.Transform.Position.Y - 20, 400f);
 
                     // 3. La agregamos a la lista de balas activas
@@ -94,36 +93,36 @@ namespace EngineGDI
                 }
             }
 
-            // --- ACTUALIZACIÓN DE BALAS Y COLISIONES ---
-            // Recorremos al revés para poder borrar elementos de la lista sin romper el loop
+            
+            
             for (int i = bullets.Count - 1; i >= 0; i--)
             {
                 Bullet b = bullets[i];
                 b.Update();
 
-                // A. Chequeo si salió de la pantalla
+                //salePantalla
                 if (b.Transform.Position.Y < 0)
                 {
-                    bulletPool.ReturnToPool(b); // ¡IMPORTANTE! Devolver al pool
+                    bulletPool.ReturnToPool(b); // Devolver al pool
                     bullets.RemoveAt(i);        // Sacar de la lista activa
                     continue;
                 }
 
-                // B. Chequeo de colisiones con enemigos
+                //Enemigos
                 for (int j = enemies.Count - 1; j >= 0; j--)
                 {
                     Enemy e = enemies[j];
 
                     if (CheckCollision(b, e))
                     {
-                        // Recibimos daño (Interface IDamageable)
+                        // Daño Idamagable
                         e.TakeDamage(1);
 
                         // La bala golpeó, así que la reciclamos
                         bulletPool.ReturnToPool(b);
                         bullets.RemoveAt(i);
 
-                        // Si el enemigo murió (usando el HealthComponent)
+                        
                         if (e.Health.IsDead)
                         {
                             // Sumamos puntos
@@ -134,7 +133,7 @@ namespace EngineGDI
                             enemies.RemoveAt(j);
                         }
 
-                        // Rompemos el bucle de enemigos porque la bala ya no existe
+                        
                         break;
                     }
                 }
@@ -178,7 +177,7 @@ namespace EngineGDI
                 {
                     e.Move(0, enemyVerticalStep);
 
-                    // Condición de Derrota: Si llegan muy abajo
+                    // Condición de Derrota (si llega abajo)
                     if (e.Transform.Position.Y > 650)
                     {
                         GameManager.Instance.CurrentState = GameState.Lose;
@@ -187,7 +186,7 @@ namespace EngineGDI
             }
         }
 
-        // Método simple de colisión AABB (Caja contra Caja) adaptado a los nuevos componentes
+        
         private bool CheckCollision(Bullet b, Enemy e)
         {
             float dx = Math.Abs(b.Transform.Position.X - e.Transform.Position.X);
@@ -215,24 +214,24 @@ namespace EngineGDI
         // Resetea el juego para volver a jugar
         public void Reset()
         {
-            // 1. Devolver todas las balas activas al pool
+            
             foreach (var b in bullets)
             {
                 bulletPool.ReturnToPool(b);
             }
             bullets.Clear();
 
-            // 2. Devolver todos los enemigos activos al pool
+            
             foreach (var e in enemies)
             {
                 enemyPool.ReturnToPool(e);
             }
             enemies.Clear();
 
-            // 3. Resetear jugador
+            
             player = new Player(350, 700, 200f);
 
-            // 4. Resetear enemigos
+            
             enemyDirection = 1;
             InitializeEnemies();
         }

@@ -35,7 +35,7 @@ namespace EngineGDI
     {
         public string TexturePath { get; set; }
         public Vector2 Size { get; set; }
-        public float OffsetX { get; set; } = 0.5f; // Pivot en el centro por defecto
+        public float OffsetX { get; set; } = 0.5f; 
         public float OffsetY { get; set; } = 0.5f;
 
         public void Draw(Transform transform)

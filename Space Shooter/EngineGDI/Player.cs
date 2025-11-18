@@ -2,8 +2,7 @@ using System.Windows.Forms;
 
 namespace EngineGDI
 {
-    // Hereda de GameObject
-    // Implementa IMovable (Interface) y IDamageable (Interface)
+    
     public class Player : GameObject, IDamageable, IMovable
     {
         public float Speed { get; private set; }

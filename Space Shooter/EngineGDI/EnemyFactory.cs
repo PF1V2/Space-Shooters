@@ -13,6 +13,7 @@ namespace EngineGDI
             enemy.Configure(x, y);
 
             
+
             return enemy;
         }
     }
