@@ -1,63 +1,40 @@
-
 namespace EngineGDI
 {
-    public class Bullet
+    // Hereda de GameObject (Herencia)
+    // Implementa IPoolable para poder ser reciclada en el ObjectPool
+    public class Bullet : GameObject, IPoolable
     {
-        private float x;
-        private float y;
-        private float speed;
-        private float width;
-        private float height;
+        public float Speed { get; set; }
 
-        
-        private string spritePath = "Bullet.png";
-
-        public float X
+        public Bullet() : base() // Llama al constructor de GameObject para crear Transform y Renderer
         {
-            get { return x; }
-            private set { x = value; }
-        }
-        public float Y
-        {
-            get { return y; }
-            private set { y = value; }
-        }
-        public float Speed
-        {
-            get { return speed; }
-            private set { speed = value; }
-        }
-        public float Width
-        {
-            get { return width; }
-            private set { width = value; }
-        }
-        public float Height
-        {
-            get { return height; }
-            private set { height = value; }
+            Renderer.TexturePath = "Bullet.png";
+            // Ajustamos el tamaño visual de la bala
+            Renderer.Size = new Vector2(10, 20);
         }
 
-        public Bullet(float startX, float startY, float speed)
+        // Método obligatorio de IPoolable: limpia el objeto para reusarlo
+        public void Reset()
         {
-            this.X = startX;
-            this.Y = startY;
-            this.Speed = speed;
-
-            
-            this.Width = 10; 
-            this.Height = 20; 
+            Speed = 0;
+            Transform.Position = Vector2.Zero;
+            IsActive = false;
         }
 
-        public void Update()
+        // Método para "disparar" la bala (configurarla)
+        public void Initialize(float startX, float startY, float speed)
         {
-            this.Y -= this.Speed * Program.deltaTime;
+            Transform.Position = new Vector2(startX, startY);
+            Speed = speed;
+            IsActive = true;
         }
 
-        public void Draw()
+        public override void Update()
         {
-            
-            Engine.Draw(spritePath, this.X, this.Y, 1, 1, 0, 0.5f, 0.5f);
+            if (!IsActive) return;
+
+            // Movemos la bala hacia arriba usando el componente Transform
+            Transform.Position.Y -= Speed * Program.deltaTime;
         }
     }
 }

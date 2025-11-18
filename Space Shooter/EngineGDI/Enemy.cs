@@ -2,47 +2,68 @@ using System.Collections.Generic;
 
 namespace EngineGDI
 {
-    public class Enemy
+    // Hereda de GameObject
+    // Implementa IDamageable (Interface) y IPoolable (Interface)
+    public class Enemy : GameObject, IDamageable, IPoolable
     {
-        public float X { get; private set; }
-        public float Y { get; private set; }
-
-        private string spritePath = "Enemy1.png";
-        public float Width { get; private set; }
-        public float Height { get; private set; }
-
         public HealthComponent Health { get; private set; }
-
         private Animation animation;
 
-        public Enemy(float startX, float startY)
+        public Enemy() : base()
         {
-            this.X = startX;
-            this.Y = startY;
-            this.Width = 40;
-            this.Height = 40;
+            // Configuración inicial del Renderer
+            Renderer.TexturePath = "Enemy1.png";
+            Renderer.Size = new Vector2(40, 40);
 
-            this.Health = new HealthComponent(1);
+            // Inicializamos la vida y nos suscribimos al evento de muerte
+            Health = new HealthComponent(1);
+            Health.OnDeath += HandleDeath; // Suscripción al evento (Punto 3)
 
+            // Animación
             List<string> enemyFrames = new List<string> { "Enemy1.png", "Enemy1v2.png" };
-            animation = new Animation(0.5f, enemyFrames, true); 
+            animation = new Animation(0.5f, enemyFrames, true);
+        }
+
+        // Método para configurar el enemigo cuando sale del Factory/Pool
+        public void Configure(float x, float y)
+        {
+            Transform.Position = new Vector2(x, y);
+            Reset();
+        }
+
+        // Obligatorio de IPoolable
+        public void Reset()
+        {
+            Health.ResetHealth(1); // Reseteamos la vida
+            IsActive = true;
+        }
+
+        // Manejador del evento OnDeath
+        private void HandleDeath()
+        {
+            IsActive = false; // El enemigo deja de dibujarse/actualizarse
+            // Aquí podrías reproducir un sonido de muerte si quisieras
+        }
+
+        // Obligatorio de IDamageable
+        public void TakeDamage(int amount)
+        {
+            Health.TakeDamage(amount);
         }
 
         public void Move(float deltaX, float deltaY)
         {
-            
-            this.X += deltaX;
-            this.Y += deltaY;
+            Transform.Position.X += deltaX;
+            Transform.Position.Y += deltaY;
         }
 
-        public void Update()
+        public override void Update()
         {
+            if (!IsActive) return;
+
             animation.Update();
-        }
-
-        public void Draw()
-        {
-            Engine.Draw(animation.CurrentTexture, this.X, this.Y, 1, 1, 0, 0.5f, 0.5f);
+            // Actualizamos la textura del Renderer con el frame actual de la animación
+            Renderer.TexturePath = animation.CurrentTexture;
         }
     }
 }

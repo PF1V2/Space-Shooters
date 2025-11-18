@@ -1,91 +1,63 @@
-using System.Windows.Forms; 
-using System.Drawing;       
+using System.Windows.Forms;
 
 namespace EngineGDI
 {
-    public class Player
+    // Hereda de GameObject
+    // Implementa IMovable (Interface) y IDamageable (Interface)
+    public class Player : GameObject, IDamageable, IMovable
     {
-        
-        public float X { get; private set; }
-        public float Y { get; private set; }
         public float Speed { get; private set; }
-        public float Width { get; private set; }
-        public float Height { get; private set; }
-
-        private string spritePath;
+        public HealthComponent Health { get; private set; }
 
         private Shooter shooter;
 
-        public Player(float startX, float startY, float moveSpeed)
+        public Player(float startX, float startY, float speed) : base()
         {
-            this.X = startX;
-            this.Y = startY;
-            this.Speed = moveSpeed;
+            Transform.Position = new Vector2(startX, startY);
+            Speed = speed;
 
-            
-            this.spritePath = "Player.png";
+            Renderer.TexturePath = "Player.png";
+            Renderer.Size = new Vector2(40, 40);
 
-            
-            this.Width = 40;
-            this.Height = 40;
-
-            this.shooter = new Shooter(0.5f);
+            Health = new HealthComponent(3); // 3 vidas
+            shooter = new Shooter(0.5f);
         }
 
-        
-        public void Update()
+        public override void Update()
         {
+            // Movimiento usando Input
+            if (Engine.IsKeyDown(Keys.Left)) Move(-Speed * Program.deltaTime, 0);
+            if (Engine.IsKeyDown(Keys.Right)) Move(Speed * Program.deltaTime, 0);
 
-            
-            if (Engine.IsKeyDown(Keys.Left))
-            {
-                this.X -= this.Speed * Program.deltaTime;
-            }
+            // Limitar posición en pantalla usando Transform y Renderer
+            float halfWidth = Renderer.Size.X / 2;
 
-            
-            if (Engine.IsKeyDown(Keys.Right))
-            {
-                this.X += this.Speed * Program.deltaTime;
-            }
+            if (Transform.Position.X - halfWidth < 0)
+                Transform.Position.X = halfWidth;
 
-            
-            float halfWidth = this.Width / 2;
-
-            
-            if (this.X - halfWidth < 0)
-            {
-                this.X = halfWidth; 
-            }
-
-            
-            if (this.X + halfWidth > Engine.Window.ClientSize.Width)
-            {
-                
-                this.X = Engine.Window.ClientSize.Width - halfWidth;
-            }
+            if (Transform.Position.X + halfWidth > Engine.Window.ClientSize.Width)
+                Transform.Position.X = Engine.Window.ClientSize.Width - halfWidth;
 
             shooter.Update();
-
         }
 
-
-        public Bullet Shoot()
+        // Obligatorio de IMovable
+        public void Move(float x, float y)
         {
-
-            if (shooter.CanShoot())
-            {
-                float bulletSpawnX = this.X;
-                float bulletSpawnY = this.Y - (this.Height / 2);
-                return new Bullet(bulletSpawnX, bulletSpawnY, 400f);
-            }
-            
-            return null;
+            Transform.Position.X += x;
+            Transform.Position.Y += y;
         }
 
-        
-        public void Draw()
+        // Chequea si puede disparar
+        public bool CanShoot()
         {
-            Engine.Draw(spritePath, this.X, this.Y, 1, 1, 0, 0.5f, 0.5f);
+            return shooter.CanShoot();
+        }
+
+        // Obligatorio de IDamageable
+        public void TakeDamage(int amount)
+        {
+            Health.TakeDamage(amount);
         }
     }
 }

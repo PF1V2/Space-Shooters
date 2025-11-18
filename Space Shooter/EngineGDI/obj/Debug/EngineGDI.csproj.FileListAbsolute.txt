@@ -74,3 +74,4 @@ C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\obj\Debug
 C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\obj\Debug\EngineGDI.csproj.CoreCompileInputs.cache
 C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\obj\Debug\EngineGDI.exe
 C:\Users\matia\Documents\Github\Space-Shooters\Space Shooter\EngineGDI\obj\Debug\EngineGDI.pdb
+C:\Users\matia\Documents\GitHub\Space-Shooters\Space Shooter\EngineGDI\bin\Debug\Disparo.wav

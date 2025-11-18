@@ -7,32 +7,43 @@ namespace EngineGDI
 {
     public class GameplayManager
     {
-        
         private Player player;
+
+        // Listas para saber qué objetos están ACTIVOS en pantalla
         private List<Enemy> enemies;
         private List<Bullet> bullets;
 
-        
+        // POOLS (Requisito 4): Aquí guardamos los objetos inactivos para reciclar
+        private ObjectPool<Bullet> bulletPool;
+        private ObjectPool<Enemy> enemyPool;
+
+        // Variables para la lógica de movimiento de enemigos (Zig-Zag)
         private float enemySpeed = 50f;
         private int enemyDirection = 1;
         private float enemyVerticalStep = 25f;
 
-
         public GameplayManager()
         {
-            
-            player = new Player(350, 700, 200f);
+            // 1. Inicializamos los Pools
+            bulletPool = new ObjectPool<Bullet>();
+            enemyPool = new ObjectPool<Enemy>();
 
-            
+            // 2. Inicializamos las listas
             enemies = new List<Enemy>();
             bullets = new List<Bullet>();
 
-            
+            // 3. Creamos al Jugador
+            player = new Player(350, 700, 200f);
+
+            // 4. Spawneamos los enemigos iniciales
             InitializeEnemies();
         }
 
         private void InitializeEnemies()
         {
+            // Aseguramos que la lista esté limpia (los objetos viejos ya debieron volver al pool en Reset)
+            enemies.Clear();
+
             int rows = 5;
             int cols = 8;
             float initialX = 80;
@@ -45,133 +56,130 @@ namespace EngineGDI
                 {
                     float x = initialX + c * spacing;
                     float y = initialY + r * spacing;
-                    enemies.Add(new Enemy(x, y));
+
+                    // --- USO DEL FACTORY (Requisito 2) ---
+                    // Le pedimos a la fábrica que nos consiga un enemigo (del pool) y lo configure.
+                    Enemy newEnemy = EnemyFactory.SpawnBasicEnemy(x, y, enemyPool);
+
+                    // Lo agregamos a la lista de "enemigos vivos"
+                    enemies.Add(newEnemy);
                 }
             }
         }
 
-
-        
         public void Update()
         {
-            
+            // Actualizar Jugador
             player.Update();
 
-            
-            UpdateEnemies();
+            // Mover Enemigos (Lógica de Zig-Zag)
+            UpdateEnemiesLogic();
 
-            foreach (Enemy enemy in enemies)
-            {
-                enemy.Update();
-            }
-
+            // --- DISPARO DEL JUGADOR ---
             if (Engine.IsKeyPressed(Keys.Space))
             {
-
-                Bullet newBullet = player.Shoot(); 
-                if (newBullet != null) 
+                if (player.CanShoot())
                 {
-                    bullets.Add(newBullet);
+                    Engine.PlaySound("Disparo.wav");
+
+                    // 1. Pedimos una bala al POOL
+                    Bullet b = bulletPool.Get();
+
+                    // 2. La configuramos (posición y velocidad)
+                    //    Usamos Transform para la posición
+                    b.Initialize(player.Transform.Position.X, player.Transform.Position.Y - 20, 400f);
+
+                    // 3. La agregamos a la lista de balas activas
+                    bullets.Add(b);
                 }
             }
 
-
+            // --- ACTUALIZACIÓN DE BALAS Y COLISIONES ---
+            // Recorremos al revés para poder borrar elementos de la lista sin romper el loop
             for (int i = bullets.Count - 1; i >= 0; i--)
             {
-                Bullet bullet = bullets[i];
-                bullet.Update();
+                Bullet b = bullets[i];
+                b.Update();
 
-                
-                if (bullet.Y < 0)
+                // A. Chequeo si salió de la pantalla
+                if (b.Transform.Position.Y < 0)
                 {
-                    bullets.RemoveAt(i);
-                    continue; 
+                    bulletPool.ReturnToPool(b); // ¡IMPORTANTE! Devolver al pool
+                    bullets.RemoveAt(i);        // Sacar de la lista activa
+                    continue;
                 }
 
-                
+                // B. Chequeo de colisiones con enemigos
                 for (int j = enemies.Count - 1; j >= 0; j--)
                 {
-                    Enemy enemy = enemies[j];
+                    Enemy e = enemies[j];
 
-                    if (CheckCollision(bullet, enemy))
+                    if (CheckCollision(b, e))
                     {
-                        
-                        bullets.RemoveAt(i);
-                        enemy.Health.TakeDamage(1);
+                        // Recibimos daño (Interface IDamageable)
+                        e.TakeDamage(1);
 
-                        if (enemy.Health.IsDead)
+                        // La bala golpeó, así que la reciclamos
+                        bulletPool.ReturnToPool(b);
+                        bullets.RemoveAt(i);
+
+                        // Si el enemigo murió (usando el HealthComponent)
+                        if (e.Health.IsDead)
                         {
-                            
-                            enemies.RemoveAt(j);
+                            // Sumamos puntos
                             ScoreManager.Instance.AddScore(10);
+
+                            // Reciclamos al enemigo
+                            enemyPool.ReturnToPool(e);
+                            enemies.RemoveAt(j);
                         }
+
+                        // Rompemos el bucle de enemigos porque la bala ya no existe
                         break;
                     }
                 }
             }
 
+            // Condición de Victoria
             if (enemies.Count == 0)
             {
                 GameManager.Instance.CurrentState = GameState.Win;
             }
         }
 
-        public void Draw()
-        {
-            
-            player.Draw();
-
-            foreach (Enemy enemy in enemies)
-            {
-                enemy.Draw();
-            }
-
-            foreach (Bullet bullet in bullets)
-            {
-                bullet.Draw();
-            }
-
-            Engine.Draw(
-                $"Score: {ScoreManager.Instance.Score}",
-                10,
-                10,
-                Brushes.White,
-                new Font("Consolas", 14)
-            );
-        }
-
-        
-        private void UpdateEnemies()
+        private void UpdateEnemiesLogic()
         {
             bool moveDown = false;
-            float horizontalMove = enemySpeed * enemyDirection * Program.deltaTime;
+            float moveX = enemySpeed * enemyDirection * Program.deltaTime;
 
-            foreach (Enemy enemy in enemies)
+            foreach (var e in enemies)
             {
-                enemy.Move(horizontalMove, 0);
-            }
+                e.Update(); // Para animaciones
+                e.Move(moveX, 0); // Interface IMovable
 
-            foreach (Enemy enemy in enemies)
-            {
-                if (enemyDirection == 1 && enemy.X + (enemy.Width / 2) > Engine.Window.ClientSize.Width)
+                // Detectar bordes de pantalla
+                float halfW = e.Renderer.Size.X / 2;
+
+                if (enemyDirection == 1 && e.Transform.Position.X + halfW > Engine.Window.ClientSize.Width)
                 {
                     moveDown = true;
-                    break;
                 }
-                else if (enemyDirection == -1 && enemy.X - (enemy.Width / 2) < 0)
+                else if (enemyDirection == -1 && e.Transform.Position.X - halfW < 0)
                 {
                     moveDown = true;
-                    break;
                 }
             }
 
+            // Si tocaron un borde, bajan y cambian de dirección
             if (moveDown)
             {
                 enemyDirection *= -1;
-                foreach (Enemy enemy in enemies)
+                foreach (var e in enemies)
                 {
-                    enemy.Move(0, enemyVerticalStep);
-                    if (enemy.Y > 650) 
+                    e.Move(0, enemyVerticalStep);
+
+                    // Condición de Derrota: Si llegan muy abajo
+                    if (e.Transform.Position.Y > 650)
                     {
                         GameManager.Instance.CurrentState = GameState.Lose;
                     }
@@ -179,32 +187,53 @@ namespace EngineGDI
             }
         }
 
-       
-
-        private bool CheckCollision(Bullet bullet, Enemy enemy)
+        // Método simple de colisión AABB (Caja contra Caja) adaptado a los nuevos componentes
+        private bool CheckCollision(Bullet b, Enemy e)
         {
+            float dx = Math.Abs(b.Transform.Position.X - e.Transform.Position.X);
+            float dy = Math.Abs(b.Transform.Position.Y - e.Transform.Position.Y);
 
-            float distanceX = Math.Abs(bullet.X - enemy.X);
-            float distanceY = Math.Abs(bullet.Y - enemy.Y);
+            float sumW = (b.Renderer.Size.X / 2) + (e.Renderer.Size.X / 2);
+            float sumH = (b.Renderer.Size.Y / 2) + (e.Renderer.Size.Y / 2);
 
-            
-            float sumHalfWidths = (bullet.Width / 2) + (enemy.Width / 2);
-            float sumHalfHeight = (bullet.Height / 2) + (enemy.Height / 2);
-
-            
-            return distanceX <= sumHalfWidths && distanceY <= sumHalfHeight;
+            return dx <= sumW && dy <= sumH;
         }
 
+        public void Draw()
+        {
+            player.Draw();
+
+            foreach (var e in enemies) e.Draw();
+            foreach (var b in bullets) b.Draw();
+
+            Engine.Draw(
+                $"Score: {ScoreManager.Instance.Score}",
+                10, 10, Brushes.White, new Font("Consolas", 14)
+            );
+        }
+
+        // Resetea el juego para volver a jugar
         public void Reset()
         {
-            
-            enemies.Clear();
+            // 1. Devolver todas las balas activas al pool
+            foreach (var b in bullets)
+            {
+                bulletPool.ReturnToPool(b);
+            }
             bullets.Clear();
 
-            
-            player = new Player(300, 700, 200f);
+            // 2. Devolver todos los enemigos activos al pool
+            foreach (var e in enemies)
+            {
+                enemyPool.ReturnToPool(e);
+            }
+            enemies.Clear();
 
-            
+            // 3. Resetear jugador
+            player = new Player(350, 700, 200f);
+
+            // 4. Resetear enemigos
+            enemyDirection = 1;
             InitializeEnemies();
         }
     }
