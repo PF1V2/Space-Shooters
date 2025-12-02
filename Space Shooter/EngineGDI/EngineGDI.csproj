@@ -100,6 +100,8 @@
     <Content Include="Enemy1v2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Enemy2.png" />
+    <Content Include="Enemy2v2.png" />
     <Content Include="Player.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

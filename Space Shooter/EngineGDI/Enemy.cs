@@ -11,31 +11,36 @@ namespace EngineGDI
 
         public Enemy() : base()
         {
-            // Configuración inicial del Renderer
-            Renderer.TexturePath = "Enemy1.png";
             Renderer.Size = new Vector2(40, 40);
-
-            // Inicializamos la vida y nos suscribimos al evento de muerte
             Health = new HealthComponent(1);
-            Health.OnDeath += HandleDeath; // Suscripción al evento (Punto 3)
-
-            // Animación
-            List<string> enemyFrames = new List<string> { "Enemy1.png", "Enemy1v2.png" };
-            animation = new Animation(0.5f, enemyFrames, true);
+            Health.OnDeath += HandleDeath;
         }
 
         // Método para configurar el enemigo cuando sale del Factory/Pool
-        public void Configure(float x, float y)
+        public void Configure(float x, float y, int hp, List<string> frames)
         {
             Transform.Position = new Vector2(x, y);
-            Reset();
+
+            // CREAMOS LA ANIMACIÓN AQUÍ, con las imágenes específicas del nivel
+            // (Si solo pasas una imagen en la lista, se verá estático, lo cual está bien)
+            animation = new Animation(0.5f, frames, true);
+
+            // Seteamos la primera textura inmediatamente para que no se vea vacío un frame
+            Renderer.TexturePath = frames[0];
+
+            Reset(hp);
         }
 
         // Obligatorio de IPoolable
+        public void Reset(int hp = 1)
+        {
+            Health.ResetHealth(hp); // Usamos el valor que nos pasan
+            IsActive = true;
+        }
+
         public void Reset()
         {
-            Health.ResetHealth(1); // Reseteamos la vida
-            IsActive = true;
+            Reset(1);
         }
 
         // Manejador del evento OnDeath
@@ -61,9 +66,12 @@ namespace EngineGDI
         {
             if (!IsActive) return;
 
-            animation.Update();
-            // Actualizamos la textura del Renderer con el frame actual de la animación
-            Renderer.TexturePath = animation.CurrentTexture;
+            // Aseguramos que la animación exista antes de actualizarla
+            if (animation != null)
+            {
+                animation.Update();
+                Renderer.TexturePath = animation.CurrentTexture;
+            }
         }
     }
 }
